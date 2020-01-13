@@ -9,10 +9,7 @@ html {
   padding: 0;
   outline: 1px solid red;
 }
-.container {
-  width: 75rem;
-  margin: 0 auto;
-}
+
 img {
   max-width: 100%;
   display: block;
@@ -44,3 +41,22 @@ input[type='“radio”'].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.container {
+  width: 292px;
+  padding: 10px;
+  margin: auto;
+}
+
+/* планшеты до десктопов*/
+@media (min-width: 708px)  {
+  .container {
+    width: 708px;
+  }
+}
+/*десктопы*/
+@media (min-width: 1145px) {
+  .container {
+    width: 1145px;
+  }
+}
+
