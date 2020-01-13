@@ -1,0 +1,128 @@
+.team-container {
+  padding-top: 50px;
+}
+
+.team {
+  &__header {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    color: #1ab798;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    color: #5885a5;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3.125rem;
+  }
+}
+
+.member-card {
+  margin-bottom: 3.125rem;
+
+  &:hover .member-card__team-overlay {
+    opacity: 1;
+  }
+
+  &:hover .member-card__tex-name {
+    color: #1ab798;
+  }
+
+  &__team {
+    position: relative;
+
+    &-overlay {
+      background-color: rgba(14, 180, 147, .85);
+      width: 270px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+
+      &-header {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      &-span {
+        display: block;
+      }
+
+      &-text {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        line-height: 24px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        width: 14.375rem;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 64px;
+      }
+
+      &-list {
+        display: flex;
+        justify-content: center;
+
+        &-link {
+          width: 2.625rem;
+          height: 2.625rem;
+          background-color: rgba(0, 0, 0, .3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 5px;
+
+          &:hover {
+            background-color: #ffffff;
+          }
+
+          &:hover .member-card__team-overlay-list-link-svg {
+            fill: #1ab798;
+          }
+
+          &-svg {
+            width: 1.375rem;
+            height: 1.125rem;
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 1.125rem;
+
+    &-name {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      color: #062033;
+      margin-bottom: 0.625rem;
+    }
+
+    &-profession {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.8125rem;
+      line-height: 1.5rem;
+      color: #062033;
+    }
+  }
+}
+
