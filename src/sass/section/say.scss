@@ -19,7 +19,7 @@
   top: 6px;
   width: 60px;
   height: 2px;
-  color: #babdc1;
+  background-color: #babdc1;
 }
 .say__h3::after {
   content: '';
@@ -29,7 +29,7 @@
   right: 0px;
   width: 60px;
   height: 2px;
-  color: #babdc1;
+  background-color: #babdc1;
 }
 .say__h3-span {
   display: block;
@@ -111,6 +111,7 @@
   }
   .say__div-buttons {
     padding-top: 65px;
+    padding-bottom: 110px;
   }
 }
 @media (min-width: 1145px) {
@@ -147,5 +148,6 @@
   }
   .say__div-buttons {
     padding-top: 55px;
+    padding-bottom: 130px;
   }
 }
