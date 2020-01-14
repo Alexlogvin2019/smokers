@@ -1,0 +1,249 @@
+.contact {
+  background-image: url(../../images/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact__h3 {
+  position: relative;
+  font-size: 18px;
+  font-family: 'Raleway';
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.333;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+.contact__h3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 68px;
+  width: 60px;
+  height: 2px;
+  background-color: #babdc1;
+}
+.contact__h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 68px;
+  right: 0px;
+  width: 60px;
+  height: 2px;
+  background-color: #babdc1;
+}
+input {
+  font-size: 16px;
+  display: block;
+  font-family: 'Open Sans';
+  color: rgb(193, 193, 193);
+  line-height: 1.5;
+  text-align: left;
+  font-weight: 400;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  width: 270px;
+  height: 44px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+textarea::placeholder {
+  color: rgb(193, 193, 193);
+}
+
+input::placeholder {
+  color: rgb(193, 193, 193);
+}
+
+textarea {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  color: rgb(193, 193, 193);
+  line-height: 1.5;
+  width: 100%;
+  resize: none;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 45px;
+}
+
+.contact__button {
+  font-size: 22px;
+  display: block;
+
+  font-family: 'Open Sans';
+  color: rgb(255, 255, 255);
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: rgb(49, 212, 231);
+  width: 170px;
+  height: 50px;
+  text-transform: uppercase;
+  margin: 0px auto;
+}
+form {
+  margin-bottom: 30px;
+}
+.contact__h4 {
+  font-size: 24px;
+  font-family: 'Raleway';
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 13px;
+}
+.contact__text {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.5;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.contact__header-p {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: rgb(191, 172, 226);
+  font-weight: bold;
+  line-height: 1.714;
+  text-align: center;
+}
+
+.contact__header-p2 {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.5;
+  text-align: left;
+  padding-bottom: 27px;
+}
+.contact__ul {
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  margin: 0px auto;
+}
+.contact__li {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.facebook {
+  background-color: #3b5997;
+  background-image: url(../../images/facebook.png);
+}
+.twitter {
+  background-color: #3ec2f3;
+  background-image: url(../../images/twitter.png);
+}
+.linkedin {
+  background-color: #007ab9;
+  background-image: url(../../images/linkedin.png);
+}
+footer {
+  border-top: 2px solid #acacac;
+}
+@media (min-width: 708px) {
+  .contact {
+    background-image: url(../../images/footer_big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact__h3::after {
+    right: 168px;
+    top: 78px;
+  }
+  .contact__h3::before {
+    left: 175px;
+    top: 78px;
+  }
+  .contact__h3 {
+    padding-bottom: 70px;
+    font-size: 28px;
+  }
+  input {
+    margin-bottom: 30px;
+    width: 270px;
+  }
+  .form-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+  }
+  textarea {
+    height: 270px;
+    margin: 0px 68px 30px;
+    width: 550px;
+  }
+  form {
+    margin-bottom: 56px;
+  }
+}
+
+@media (min-width: 1145px) {
+  .contact__main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .contact_main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact__ul {
+    margin: 0px;
+  }
+  .contact__text {
+    text-align: left;
+    width: 420px;
+  }
+  .contact__h3::after {
+    right: 403px;
+    top: 78px;
+  }
+  .contact__h3::before {
+    left: 403px;
+    top: 78px;
+  }
+  .contact__h3 {
+    padding-bottom: 70px;
+    font-size: 28px;
+  }
+  input {
+    margin-bottom: 30px;
+    width: 270px;
+  }
+  .form-div {
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+    padding: 0px;
+  }
+  textarea {
+    height: 180px;
+    width: 570px;
+    margin: 0px 0px 68px;
+  }
+  form {
+    margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .contact__button {
+    margin: 0px;
+  }
+}
