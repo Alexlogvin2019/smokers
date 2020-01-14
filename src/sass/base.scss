@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -13,6 +14,7 @@ img {
   max-width: 100%;
   display: block;
 }
+
 h1,
 h2,
 h3,
@@ -21,10 +23,12 @@ h5,
 h6 {
   margin: 0;
 }
+
 ul,
 ol {
   list-style: none;
 }
+
 .visually-hidden:not(:focus):not(:active),
 input[type='“checkbox”'].visually-hidden,
 input[type='“radio”'].visually-hidden {
@@ -46,8 +50,9 @@ input[type='“radio”'].visually-hidden {
   margin: auto;
 }
 
-/* планшеты до десктопов*/
-@media (min-width: 708px)  {
+
+/* планшеты */
+@media (min-width: 708px) {
   .container {
     width: 708px;
   }
@@ -58,4 +63,3 @@ input[type='“radio”'].visually-hidden {
     width: 1145px;
   }
 }
-
