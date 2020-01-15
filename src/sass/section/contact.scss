@@ -154,6 +154,9 @@ form {
 footer {
   border-top: 2px solid #acacac;
 }
+.fadein {
+  display: none;
+}
 @media (min-width: 708px) {
   .contact {
     background-image: url(../../images/footer_big.jpg);
