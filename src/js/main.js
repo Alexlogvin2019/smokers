@@ -3,7 +3,9 @@ $(document).ready(function(){
       {
         dots: true,
       }
-    );
+	);
+	
+ 
 
   $('#form').submit(function(){
 		var form = $(this);
