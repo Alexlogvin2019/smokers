@@ -7,34 +7,36 @@ $(document).ready(function(){
 	
  
 
-  $('#form').submit(function(){
+	$('form').on('submit', (function (e) {
+		e.preventDefault();
 		var form = $(this);
 		var error = false;
-		form.find('textaria, input').each( function(){
-			if ($(this).val() == '') {
-				error = true;
-			}
+		
+		form.find('textaria, input').each(function () {
+		  if ($(this).val() == '') {
+			error = true;
+		  }
 		});
+	
 		if (!error) {
-			var data = form.serialize();
-			$.ajax({
-				type: 'POST',
-				url: './email.php',
-				dataType: 'json',
-				data: data,
-				beforeSend: function(data) {
-					form.find('.contact__button').attr('disabled', 'disabled');
-				},
-				success: function(data){
-            $('.contact__button').fadeOut('slow');
-            $('.fadein').fadeIn('slow');
-					
-				},
-				complete: function(data) {
-					form.find('.contact__button').prop('disabled', false);
-        }
-      });
+		  var data = form.serialize();
+		  $.ajax({
+			type: 'POST',
+			url: './email.php',
+			dataType: 'json',
+			data: data,
+			beforeSend: function beforeSend(data) {
+			  form.find('.contact__button').attr('disabled', 'disabled');
+			},
+			success: function(response) {
+			  alert('thank you');
+			},
+			complete: function complete(data) {
+			  form.find('.contact__button').prop('disabled', false);
+			}
+		  });
 		}
-    return false;
-  });
+	
+		return false;
+	  }));
 });

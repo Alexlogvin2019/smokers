@@ -1,16 +1,16 @@
 <?php
 if ($_POST) { 
-	$name = htmlspecialchars($_POST["name"]); // Ð¿Ð¸ÑˆeÐ¼ Ð´aÐ½Ð½Ñ‹e Ð² Ð¿eÑ€eÐ¼eÐ½Ð½Ñ‹e Ð¸ ÑÐºÑ€aÐ½Ð¸Ñ€ÑƒeÐ¼ ÑÐ¿eÑ†ÑÐ¸Ð¼Ð²oÐ»Ñ‹
+	$name = htmlspecialchars($_POST["name"]); // ïèøeì äaííûe â ïeðeìeííûe è ýêðaíèðóeì ñïeöñèìâoëû
 	$email = htmlspecialchars($_POST["email"]);
 	$subject = htmlspecialchars($_POST["message"]);
 	$body = "Name: $name \n\nEmail: $email \n\nSubject: $subject";
 	$json = array(); 
-	function mime_header_encode($str, $data_charset, $send_charset) { // Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð¿Ñ€eoÐ±Ñ€aÐ·oÐ²aÐ½Ð¸Ñ Ð·aÐ³oÐ»oÐ²ÐºoÐ² Ð² Ð²eÑ€Ð½ÑƒÑŽ ÐºoÐ´Ð¸Ñ€oÐ²ÐºÑƒ 
+	function mime_header_encode($str, $data_charset, $send_charset) { // ôóíêöèÿ ïðeoáðaçoâaíèÿ çaãoëoâêoâ â âeðíóþ êoäèðoâêó 
 		if($data_charset != $send_charset);
 		$str=iconv($data_charset,$send_charset.'//IGNORE',$str);
 		return ('=?'.$send_charset.'?B?'.base64_encode($str).'?=');
 	}
-	// ÑÑƒÐ¿eÑ€ ÐºÐ»aÑÑ Ð´Ð»Ñ oÑ‚Ð¿Ñ€aÐ²ÐºÐ¸ Ð¿Ð¸ÑÑŒÐ¼a Ð² Ð½ÑƒÐ¶Ð½oÐ¹ ÐºoÐ´Ð¸Ñ€oÐ²Ðºe 
+	// ñóïeð êëaññ äëÿ oòïðaâêè ïèñüìa â íóæíoé êoäèðoâêe 
 	class TEmail {
 	public $from_email;
 	public $from_name;
@@ -34,17 +34,22 @@ if ($_POST) {
 		return mail($enc_to,$enc_subject,$enc_body,$headers);
 	}
 	}
-	$emailgo= new TEmail; // Ð¸Ð½Ð¸Ñ†Ð¸aÐ»Ð¸Ð·Ð¸Ñ€ÑƒeÐ¼ ÑÑƒÐ¿eÑ€ ÐºÐ»aÑÑ oÑ‚Ð¿Ñ€aÐ²ÐºÐ¸
-	$emailgo->from_email= $email; // oÑ‚ ÐºoÐ³o
+	$emailgo= new TEmail; // èíèöèaëèçèðóeì ñóïeð êëaññ oòïðaâêè
+	$emailgo->from_email= $email; // oò êoão
 	$emailgo->from_name= $name;
-	$emailgo->to_email= 'alexlogvin@yahoo.com'; // ÐºoÐ¼Ñƒ
-	$emailgo->subject= $subject; // Ñ‚eÐ¼a
-	$emailgo->body= $body; // ÑooÐ±Ñ‰eÐ½Ð¸e
-	$emailgo->send(); // oÑ‚Ð¿Ñ€aÐ²Ð»ÑeÐ¼
-	$json['error'] = 0; // oÑˆÐ¸Ð±oÐº Ð½e Ð±Ñ‹Ð»o
-	//echo json_encode($json); // Ð²Ñ‹Ð²oÐ´Ð¸Ð¼ Ð¼aÑÑÐ¸Ð² oÑ‚Ð²eÑ‚a
-} else { // eÑÐ»Ð¸ Ð¼aÑÑÐ¸Ð² POST Ð½e Ð±Ñ‹Ð» Ð¿eÑ€eÐ´aÐ½
-	echo 'GET LOST!'; // Ð²Ñ‹ÑÑ‹Ð»aeÐ¼
+	$emailgo->to_email= 'arturbohanov1908@gmail.com'; // êoìó
+	$emailgo->subject= $subject; // òeìa
+	$emailgo->body= $body; // ñooáùeíèe
+	$emailgo->send(); // oòïðaâëÿeì
+	$json['error'] = 0; // oøèáoê íe áûëo
 	
+	die(json_encode([
+    'status' => 'success'
+]));
+	//return (true);
+//	print ("Your email has been successfully sent\n");
+	//echo json_encode($json); // âûâoäèì ìaññèâ oòâeòa
+} else { // eñëè ìaññèâ POST íe áûë ïeðeäaí
+	echo 'GET LOST!'; // âûñûëaeì
 }
 ?>
