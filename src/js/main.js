@@ -31,7 +31,7 @@ $(document).ready(function(){
 			},
 			success: function(response) {
 			  //alert('thank you');
-			  window.location.href = "./success/index.thml"
+			  window.location.href = "./success/index.html"
 			  //window.open("http://http://1652079.smokerst.web.hosting-test.net/index2.html");
 			},
 			complete: function complete(data) {
