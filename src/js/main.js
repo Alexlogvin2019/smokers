@@ -1,7 +1,8 @@
 $(document).ready(function(){
     $('.your-class').slick(
       {
-        dots: true,
+		dots: true,
+		arrows: false
       }
 	);
 	
@@ -29,7 +30,9 @@ $(document).ready(function(){
 			  form.find('.contact__button').attr('disabled', 'disabled');
 			},
 			success: function(response) {
-			  alert('thank you');
+			  //alert('thank you');
+			  window.location.href = "./success/index.thml"
+			  //window.open("http://http://1652079.smokerst.web.hosting-test.net/index2.html");
 			},
 			complete: function complete(data) {
 			  form.find('.contact__button').prop('disabled', false);
