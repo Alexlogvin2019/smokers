@@ -1,25 +1,32 @@
-$(document).ready(function(){
-    $('.your-class-team').slick({
+$(document).ready(function () {
+  $('.your-class-team').slick({
+    arrows: true,
     centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
+    // centerPadding: '60px',
+    // slidesToShow: 4,
+
     responsive: [
-        {
-        breakpoint: 768,
+      {
+        breakpoint: 1920,
         settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
+          slidesToShow: 3,
+          centerPadding: '90px',
         }
-        },
-        {
+      },
+      {
+        breakpoint: 1144,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '60px',
+        }
+      },
+      {
         breakpoint: 480,
         settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
+          slidesToShow: 1,
+          centerPadding: '0px',
         }
+      }
     ]
-    });
+  })
+});
