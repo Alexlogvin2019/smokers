@@ -59,6 +59,25 @@ textarea::placeholder {
 input::placeholder {
   color: rgb(193, 193, 193);
 }
+textarea:focus:invalid {
+  outline: 2px solid red;
+}
+textarea:focus:valid {
+  outline: 2px solid green;
+}
+
+input[type='email']:focus:invalid {
+  outline: 2px solid red;
+}
+input[type='email']:focus:valid {
+  outline: 2px solid green;
+}
+input[type='text']:focus:invalid {
+  outline: 2px solid red;
+}
+input[type='text']:focus:valid {
+  outline: 2px solid green;
+}
 
 textarea {
   font-size: 16px;
