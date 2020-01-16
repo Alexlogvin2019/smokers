@@ -12,3 +12,18 @@ const closeMenu = () => {
 
 burgerBtn.addEventListener('click', openMenu);
 burgerBtnClose.addEventListener('click', closeMenu);
+
+const leftUl = document.querySelector('.left');
+const rightUl = document.querySelector('.right');
+
+window.addEventListener('scroll', () => {
+  console.log('ok');
+  console.log(pageYOffset);
+  if (pageYOffset >= 1060) {
+    leftUl.classList.add('slideInLeft');
+    rightUl.classList.add('slideInRight');
+  } else {
+    leftUl.classList.remove('slideInLeft');
+    rightUl.classList.remove('slideInRight');
+  }
+});
