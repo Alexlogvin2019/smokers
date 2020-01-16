@@ -106,13 +106,18 @@ form {
   text-align: center;
   padding-bottom: 40px;
 }
+
 .contact__header-p {
+  display: block;
+  text-align: center;
+}
+.contact__header-p a {
+  text-decoration: none;
   font-size: 14px;
   font-family: 'Open Sans';
   color: rgb(191, 172, 226);
   font-weight: bold;
   line-height: 1.714;
-  text-align: center;
 }
 
 .contact__header-p2 {
@@ -137,6 +142,11 @@ form {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+}
+.contact__li-a {
+  width: 42px;
+  display: block;
+  height: 42px;
 }
 
 .facebook {
@@ -248,5 +258,9 @@ footer {
   }
   .contact__button {
     margin: 0px;
+  }
+  .contact__header-p {
+    margin: 0;
+    text-align: left;
   }
 }
