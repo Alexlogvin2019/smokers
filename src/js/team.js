@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     responsive: [
       {
-        breakpoint: 1920,
+        breakpoint: 3200,
         settings: {
           slidesToShow: 3,
           centerPadding: '90px',
@@ -21,8 +21,9 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 708,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           centerPadding: '0px',
         }
