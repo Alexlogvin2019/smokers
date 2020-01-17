@@ -40,9 +40,10 @@
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
   animation-duration: 1s;
-} 
+}
 .header {
   width: 100%;
+  height: auto;
   display: flex;
   position: absolute;
   padding: 30px 0px;
@@ -76,7 +77,7 @@
 .modal-menu {
   display: none;
   position: absolute;
-  width: 100%; 
+  width: 100%;
   top: -20px;
   left: 0;
   background-color: #ffffff;
@@ -90,23 +91,23 @@
 .modal-list-link {
   display: block;
   width: 100%;
-  font-size: 26px;
-  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
   color: rgb(26, 183, 152);
   font-weight: 900;
   text-transform: uppercase;
   line-height: 36px;
   text-decoration: none;
-  border: 2px solid rgb(26, 183, 152);
+  // border: 2px solid rgb(26, 183, 152);
 }
 
 .modal-list {
-    padding-top: 120px;
-    text-align: center;
-    background-color: white;
+  padding-top: 120px;
+  text-align: center;
+  background-color: white;
 }
 .modal-list-item {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .hamburger-list {
   display: none;
@@ -114,12 +115,13 @@
 .modal-close-btn {
   position: absolute;
   right: 0;
-  width: 32px;
-  height: 32px;
-  background-image: url(../../images/modal-cross.png);
+  width: 52px;
+  height: 52px;
+  background-image: url(../../images/modal-cross.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
+  background-size: cover;
   border: none;
 }
 
@@ -140,7 +142,7 @@
   }
   .hamburger-link {
     font-size: 12px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: rgba(40, 37, 40, 0.6);
     font-weight: 700;
     text-transform: uppercase;
@@ -152,6 +154,7 @@
     font-weight: 700;
   }
 }
+
 @media (min-width: 1145px) {
   .site-logo {
     font-size: 30px;
@@ -167,7 +170,7 @@
   }
   .hamburger-link {
     font-size: 13px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: rgba(40, 37, 40, 0.6);
     font-weight: 700;
     text-transform: uppercase;
@@ -186,5 +189,4 @@
     background-color: #fff;
     margin-top: 20px;
   }
-  
 }
