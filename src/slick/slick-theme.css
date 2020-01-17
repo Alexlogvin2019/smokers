@@ -113,7 +113,30 @@
 {
     content: '←';
 }
-
+@media (min-width: 708px) and (max-width: 1144px) {
+    .slick-prev
+{
+    left: -70px;
+}
+    .slick-next
+{
+    right: -70px;
+}
+.slick-prev:before,
+.slick-next:before {
+    font-size: 49px;
+}
+}
+@media (min-width: 1145px) {
+    .slick-prev
+{
+    left: -80px;
+}
+    .slick-next
+{
+    right: -80px;
+}
+}
 /* Dots */
 .slick-dotted.slick-slider
 {
