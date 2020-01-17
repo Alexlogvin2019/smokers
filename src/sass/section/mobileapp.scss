@@ -51,8 +51,7 @@
 }
 
 .mobile_btn {
-  border-radius: 5px;
-  background-color: rgb(26, 183, 152);
+  
   width: 211px;
   height: 48px;
   color: #ffffff;
@@ -75,6 +74,8 @@
   left: 12px;
 }
 .mobile_btn-download {
+  border-radius: 5px;
+  background-color: rgb(26, 183, 152);
   font-family: $main-text;
   display: inline-block;
   color: white;
@@ -85,6 +86,10 @@
   /*padding-left: 6px;*/
   width: 211px;
   height: 48px;
+}
+.mobile_btn-download:hover {
+  background-color: #31d4e7;
+  // color: rgb(26, 183, 152);
 }
 .mobile-img {
   display: none;
