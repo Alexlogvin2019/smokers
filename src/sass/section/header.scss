@@ -45,8 +45,8 @@
   width: 100%;
   height: auto;
   display: flex;
+  align-items: center;
   position: absolute;
-  padding: 30px 0px;
   background-color: #fff;
   top: 20px;
 }
@@ -127,7 +127,7 @@
 
 @media (min-width: 708px) {
   .header {
-    min-height: 80px;
+    height: auto;
   }
   .site-logo {
     font-size: 30px;
@@ -154,8 +154,11 @@
     font-weight: 700;
   }
 }
-
 @media (min-width: 1145px) {
+  .header {
+    height: 80px;
+  }
+
   .site-logo {
     font-size: 30px;
   }
@@ -164,7 +167,6 @@
   }
   .hamburger-list {
     width: 448px;
-    height: 88px;
     display: flex;
     justify-content: space-between;
   }
@@ -174,7 +176,7 @@
     color: rgba(40, 37, 40, 0.6);
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 88px;
+    // line-height: 88px;
     text-decoration: none;
   }
   .hamburger-link:hover {
@@ -185,7 +187,7 @@
     width: 100%;
     display: flex;
     position: absolute;
-    padding: 30px 0px;
+    align-items: center;
     background-color: #fff;
     margin-top: 20px;
   }
