@@ -2,7 +2,9 @@ $(document).ready(function(){
     $('.your-class').slick(
       {
 		dots: true,
-		arrows: false
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 2000	
       }
 	);
 	

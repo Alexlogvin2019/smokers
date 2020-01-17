@@ -81,6 +81,7 @@ input[type='text']:focus:valid {
 
 textarea {
   font-size: 16px;
+  height: 150px;
   font-family: 'Open Sans';
   color: rgb(193, 193, 193);
   line-height: 1.5;
@@ -147,6 +148,13 @@ form {
   text-align: left;
   padding-bottom: 27px;
 }
+.contact__header-p2 a {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: rgb(49, 212, 231);
+  text-decoration: none;
+}
+
 .contact__ul {
   display: flex;
   width: 160px;

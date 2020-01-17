@@ -17,6 +17,7 @@ const leftUl = document.querySelector('.left');
 const rightUl = document.querySelector('.right');
 
 window.addEventListener('scroll', () => {
+  if (window.innerWidth > 708) {
   console.log('ok');
   console.log(pageYOffset);
   if (pageYOffset >= 1060) {
@@ -26,4 +27,6 @@ window.addEventListener('scroll', () => {
     leftUl.classList.remove('slideInLeft');
     rightUl.classList.remove('slideInRight');
   }
+}
+  
 });
