@@ -127,7 +127,7 @@
 
 @media (min-width: 708px) {
   .header {
-    min-height: 80px;
+    height: auto;
   }
   .site-logo {
     font-size: 30px;
@@ -153,8 +153,12 @@
     color: rgba(40, 37, 40, 1);
     font-weight: 700;
   }
-
+}
 @media (min-width: 1145px) {
+  .header {
+    height: 80px;
+  }
+
   .site-logo {
     font-size: 30px;
   }
@@ -163,7 +167,6 @@
   }
   .hamburger-list {
     width: 448px;
-    height: 88px;
     display: flex;
     justify-content: space-between;
   }
@@ -173,7 +176,7 @@
     color: rgba(40, 37, 40, 0.6);
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 88px;
+    // line-height: 88px;
     text-decoration: none;
   }
   .hamburger-link:hover {
@@ -188,5 +191,4 @@
     background-color: #fff;
     margin-top: 20px;
   }
-  
 }
